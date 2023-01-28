@@ -4,9 +4,9 @@
 source Sentimental_Analyzer/venv/bin/activate
 
 # change directory to the location of manage.py
-cd Sentimental_Analyzer
-
+#cd Sentimental_Analyzer
+#cd ..
 # run database migrations
-python manage.py makemigrations
+python3 manage.py makemigrations
 
-python manage.py migrate
+python3 manage.py migrate

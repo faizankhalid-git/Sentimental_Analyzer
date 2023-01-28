@@ -16,4 +16,4 @@ virtualenv Sentimental_Analyzer/venv
 source Sentimental_Analyzer/venv/bin/activate
 
 # install requirements
-pip3 install -r Sentimental_Analyzer/requirements.txt
+pip3 install -r requirments.txt
