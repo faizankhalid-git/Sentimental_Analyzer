@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Groovin Bootstrap Template - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Groovin - v4.10.0
+    * Template URL: https://bootstrapmade.com/groovin-free-bootstrap-theme/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+    <style>
+        .dtHorizontalVerticalExampleWrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#dtHorizontalVerticalExample th, td {
+  white-space: nowrap;
+}
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: .5em;
+}
+
+
+    </style>
+</head>
+
+<body>
+<script crossorigin="anonymous" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+<!-- ======= Header ======= -->
+<header class="fixed-top d-flex align-items-center" id="header">
+    <div class="container d-flex align-items-center justify-content-between">
+        <h1 class="logo"><a href="index.html">Groovin</a></h1>
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header>
+<!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+
+<section id="hero">
+    <div class="hero-container">
+        <div class="carousel slide carousel-fade" data-bs-interval="5000" data-bs-ride="carousel" id="heroCarousel">
+
+            <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+            <div class="carousel-inner" role="listbox">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active"
+
+                     style="background-image: url({% static 'assets/img/slide/slide-1.jpg' %});">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="carousel-container container">
+
+                            <div class="container">
+                                <div class="row">
+                                    {% if sentiment %}
+                                    <div class="d-flex justify-content-around ">
+                                        <div class="alert alert-info     bg-light" role="alert" style="width: 50%;">
+                                            <h4 class="alert-heading">Results!</h4>
+                                            <p class="mb-0 text-dark">You Entered {{sentiment}} Comment</p>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                    <input class="form-control" name="data"
+                                           placeholder="Please Enter text to analyze" type="text">
+                                    <div class="text-center">
+                                        <button class="text-center btn btn-success btn-lg btn-block mt-6"
+                                                style="width: 735px; margin-top: 20px;"
+                                                type="submit">Analyze Text
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+                <!--                &lt;!&ndash; Slide 2 &ndash;&gt;-->
+                <!--                <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-2.jpg' %});">-->
+                <!--                    <div class="carousel-container">-->
+                <!--                        <div class="carousel-content">-->
+                <!--                            <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>-->
+                <!--                            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui-->
+                <!--                                aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem-->
+                <!--                                mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti-->
+                <!--                                vel. Minus et tempore modi architecto.</p>-->
+                <!--                            <div>-->
+                <!--                                <a class="btn-get-started animate__animated animate__fadeInUp scrollto" href="#about">Read-->
+                <!--                                    More</a>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+
+                <!--                &lt;!&ndash; Slide 3 &ndash;&gt;-->
+                <!--                <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-3.jpg' %});">-->
+                <!--                    <div class="carousel-container">-->
+                <!--                        <div class="carousel-content">-->
+                <!--                            <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>-->
+                <!--                            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui-->
+                <!--                                aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem-->
+                <!--                                mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti-->
+                <!--                                vel. Minus et tempore modi architecto.</p>-->
+                <!--                            <div>-->
+                <!--                                <a class="btn-get-started animate__animated animate__fadeInUp scrollto" href="#about">Read-->
+                <!--                                    More</a>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+
+            </div>
+
+            <a class="carousel-control-prev" data-bs-slide="prev" href="#heroCarousel" role="button">
+                <span aria-hidden="true" class="carousel-control-prev-icon bi bi-chevron-left"></span>
+            </a>
+
+            <a class="carousel-control-next" data-bs-slide="next" href="#heroCarousel" role="button">
+                <span aria-hidden="true" class="carousel-control-next-icon bi bi-chevron-right"></span>
+            </a>
+
+        </div>
+    </div>
+</section><!-- End Hero -->
+<main id="main">
+
+
+    <div class="container mt-5 mb-5"><h1>History</h1></div>
+    <div class="container history mt-6">
+        <table cellspacing="0" class="table table-striped table-bordered table-sm " id="dtHorizontalVerticalExample"
+               width="100%">
+            <thead>
+            <tr>
+                <th>Comment ID</th>
+                <th>Comment</th>
+                <th>Sentiment</th>
+                <th>Posting Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for obj in comments %}
+            <tr>
+                <td>{{obj.id}}</td>
+                <td>{{obj.comment}}</td>
+                <td>{{obj.sentiment}}</td>
+                <td>{{obj.date}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- ======= Why Us Section ======= -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Why Us</h2>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
+                    fugiat sit in iste officiis commodi quidem hic quas.</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-4">
+                    <div class="box">
+                        <span>01</span>
+                        <h4>Lorem Ipsum</h4>
+                        <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero
+                            placeat</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                    <div class="box">
+                        <span>02</span>
+                        <h4>Repellat Nihil</h4>
+                        <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire
+                            leno para dest</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                    <div class="box">
+                        <span>03</span>
+                        <h4> Ad ad velit qui</h4>
+                        <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam
+                            quis</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Why Us Section -->
+
+
+    <!-- ======= Contact Section ======= -->
+    <section class="contact" id="contact">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Contact</h2>
+                <p>Fill the form and send the message any time</p>
+            </div>
+
+            <div class="row contact-info">
+
+                <div class="col-md-4">
+                    <div class="contact-address">
+                        <i class="bi bi-geo-alt"></i>
+                        <h3>Address</h3>
+                        <address>Kolonivagan 1B LGH,karlskrona, Sweden</address>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contact-phone">
+                        <i class="bi bi-phone"></i>
+                        <h3>Phone Number</h3>
+                        <p><a href="tel:+155895548855">+46727896103</a></p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contact-email">
+                        <i class="bi bi-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@example.com">faizan.khalid23031999@gmail.com</a></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form">
+                <form  class="php-email-form"    role="form" >
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <input class="form-control" data-msg="Please enter at least 4 chars" data-rule="minlen:4"
+                                   id="name" name="name"
+                                   placeholder="Your Name" type="text">
+                        </div>
+                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <input class="form-control" data-msg="Please enter a valid email" data-rule="email"
+                                   id="email" name="email"
+                                   placeholder="Your Email" type="email">
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <input class="form-control" id="subject" name="subject" placeholder="Subject" required
+                               type="text">
+                    </div>
+                    <div class="form-group mt-3">
+                        <textarea class="form-control" name="message" placeholder="Message" required
+                                  rows="5"></textarea>
+                    </div>
+                    <div class="my-3">
+                        <div class="loading">Loading</div>
+                        <div class="error-message">Your message has been sent. Thank you!<</div>
+                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-info">
+                        <h3>Groovin</h3>
+                        <p>
+                            Kolonivagan 1B LGH <br>
+                            37157 Karlskrona, Sweden<br><br>
+                            <strong>Phone:</strong> +46727896103<br>
+                            <strong>Email:</strong> faizan.khalid23031999@gmail.com<br>
+                        </p>
+                        <div class="social-links mt-3">
+                            <a class="twitter" href="#"><i class="bx bxl-twitter"></i></a>
+                            <a class="facebook" href="#"><i class="bx bxl-facebook"></i></a>
+                            <a class="instagram" href="#"><i class="bx bxl-instagram"></i></a>
+                            <a class="google-plus" href="#"><i class="bx bxl-skype"></i></a>
+                            <a class="linkedin" href="#"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <h4>Our Newsletter</h4>
+                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                    <form action="" method="post">
+                        <input name="email" type="email"><input type="submit" value="Subscribe">
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="copyright">
+            &copy; Copyright <strong><span>FAA</span></strong>. All Rights Reserved
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<a class="back-to-top d-flex align-items-center justify-content-center" href="#"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+<script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+<!-- Template Main JS File -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+<link href="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.css" rel="stylesheet" type="text/css"/>
+
+<script src="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+  $('#dtHorizontalVerticalExample').DataTable({
+    "scrollX": true,
+    "scrollY": 200,
+  });
+  $('.dataTables_length').addClass('bs-select');
+});
+
+
+
+</script>
+</body>
+
+</html>
