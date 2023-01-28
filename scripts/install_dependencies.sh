@@ -10,10 +10,10 @@ apt-get install -y python3 python3-pip
 pip3 install virtualenv
 
 # create virtual environment
-virtualenv /opt/Sentimental_Analyzer/venv
+virtualenv Sentimental_Analyzer/venv
 
 # activate virtual environment
-source /opt/Sentimental_Analyzer/venv/bin/activate
+source Sentimental_Analyzer/venv/bin/activate
 
 # install requirements
-pip3 install -r /opt/Sentimental_Analyzer/requirements.txt
+pip3 install -r Sentimental_Analyzer/requirements.txt
