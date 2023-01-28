@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /opt/my-django-app
+    destination: Sentimental_Analyzer
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
